@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/gradiente_bg"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,27 +19,46 @@
 
         <ImageView
             android:src="@drawable/ic_weight"
-            android:layout_margin="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="16dp"
             app:tint="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calculadora IMC"
-            android:layout_marginStart="24dp"/>
+            android:layout_marginStart="24dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="48dp"
+            android:text="Preencha todos os campos para calcular seu IMC"
+            android:textColor="@color/white"/>
+
 
     </LinearLayout>
+
     <Button
         android:id="@+id/btn_calcular"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_height="68dp"
+        android:layout_marginStart="24dp"
         android:text="Calcular"
-
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="128dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -46,8 +66,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:hintAnimationEnabled="false"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="94dp">
+        app:layout_constraintTop_toBottomOf="@+id/vg_header"
+        tools:layout_editor_absoluteX="1dp">
 
 
         <com.google.android.material.textfield.TextInputEditText
@@ -72,7 +92,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_altura"
             android:drawableEnd="@drawable/ic_height"
-            android:maxLength="5"
+            android:maxLength="4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_bg"
