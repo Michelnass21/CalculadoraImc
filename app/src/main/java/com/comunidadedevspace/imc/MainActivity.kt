@@ -10,16 +10,23 @@ import com.google.android.material.textfield.TextInputEditText
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main) // setContentView serve para conectar mainActivity com Activity_main.xml
 
-        val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
-        val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)
+        // Recuperar os componenetes EditText ( usando o código findViewById )
+        // Criar uma variavel e associar o componente de UI <TextInputEditText>
+        // Recuperar o botão da tela
+        // Colocar ação no botão
+        // Recuperar texto digitado no edt peso
+        //
 
-        val btnCalcular =  findViewById<Button>(R.id.btn_calcular)
 
-        btnCalcular.setOnClickListener {
+        val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso) // findViewById serve para recuperar o arquivo dentro do Xml
+        val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura) // dentro do <> vai todos os tipos de View
+        val btnCalcular =  findViewById<Button>(R.id.btn_calcular) // dentro do () é inserido o valor do ID
+
+        btnCalcular.setOnClickListener { // setOnClickListener serve para colocar um click no botão
             
-            val pesoStr: String = edtPeso.text.toString()
+            val pesoStr: String = edtPeso.text.toString() // .text serve para recuperar o texto e colocar na variavel
             val alturaStr: String = edtAltura.text.toString()
 
             if (pesoStr == "" || alturaStr == ""){
