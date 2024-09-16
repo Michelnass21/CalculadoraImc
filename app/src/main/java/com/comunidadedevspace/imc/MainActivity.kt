@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         // Recuperar o botão da tela
         // Colocar ação no botão
         // Recuperar texto digitado no edt peso
-        //
-
 
         val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso) // findViewById serve para recuperar o arquivo dentro do Xml
         val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura) // dentro do <> vai todos os tipos de View
@@ -27,29 +25,31 @@ class MainActivity : AppCompatActivity() {
         btnCalcular.setOnClickListener { // setOnClickListener serve para colocar um click no botão
             
             val pesoStr: String = edtPeso.text.toString() // .text serve para recuperar o texto e colocar na variavel
-            val alturaStr: String = edtAltura.text.toString()
+            val alturaStr: String = edtAltura.text.toString() // toString para permitir apenas numeros
 
-            if (pesoStr == "" || alturaStr == ""){
+            if (pesoStr == "" || alturaStr == ""){ // "" para verificar se esta vazio
 
-                Snackbar
-                    .make(
-                    edtPeso,
-                        "Preencha todos os campos",
-                        Snackbar.LENGTH_LONG
-                    )
-                .show()
+                Snackbar // serve para criar mensagens para mostrar ao usuarios, tipo avisos
+                    .make( // complemento para criação do Snackbar
+                        edtPeso, "Preencha todos os campos",
+                        Snackbar.LENGTH_LONG) // é o tempo
+                    .show() // para mostrar mesmo de fato
             } else {
-                val peso = pesoStr.toFloat()
-                val altura = alturaStr.toFloat()
+                val peso = pesoStr.toFloat() // convertendo para texto
+                val altura = alturaStr.toFloat() // convertendo para texto
 
                 val alturaQ2 = altura * altura
                 val resultado = peso / alturaQ2
 
+                // Intent é uma classe do próprio android e ela serve para declarar a inteção de fazer alguma no sistema operacional do android
 
                 val intent =  Intent(this, ResultActivity::class.java)
-                intent.putExtra(KEY_RESULT_IMC, resultado)
+                intent.putExtra(KEY_RESULT_IMC, resultado) // serve para passar os dados para próxima tela
                 startActivity(intent)
 
+                // Navegar para próxima tela = ok
+                // Criar o layout da próxima tela = ok
+                // Passar dados para próxima tela
                 // Cores
                 // EdiText background + icone
                 // Gradiente + icone + titulo + descrição
