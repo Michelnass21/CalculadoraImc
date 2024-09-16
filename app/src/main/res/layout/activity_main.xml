@@ -76,7 +76,7 @@
             android:layout_height="54dp"
             android:background="@drawable/rounded_bg"
             android:drawableEnd="@drawable/ic_weight"
-            android:hint="Digite seu peso ex: 70.200"
+            android:hint="Digite seu peso ex: 70.20"
             android:inputType="numberDecimal"
             android:maxLength="6" />
     </com.google.android.material.textfield.TextInputLayout>

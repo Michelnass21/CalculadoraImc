@@ -16,7 +16,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/gradiente_bg">
 
-
         <ImageView
             android:src="@drawable/ic_weight"
             android:layout_marginTop="16dp"
@@ -46,21 +45,18 @@
 
         <TextView
             android:id="@+id/tv_result"
-            android:textSize="64sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:maxLength="5"
-            android:layout_marginBottom="48dp"
-            android:layout_marginTop="24dp"
-            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="48dp"
+            android:gravity="center"
+            android:maxLength="5"
+            android:textColor="@color/white"
+            android:textSize="64sp"
+            android:textStyle="bold"
             tools:text="23.66" />
 
-
     </LinearLayout>
-
-
 
     <TextView
         android:id="@+id/tv_classificacão_label"
